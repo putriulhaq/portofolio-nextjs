@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
   };
   return (
     <header className="bg-gray-100 p-4 flex justify-center font-bold items-center fixed top-0 left-0 w-full">
-        <h1 onClick={handleClick} className='cursor-pointer'>punyaulhaq</h1>
+        <h1 onClick={handleClick} className='cursor-pointer text-gray-700 dark:text-gray-300'>punyaulhaq</h1>
     </header>
   );
 };

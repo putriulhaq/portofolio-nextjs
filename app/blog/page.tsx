@@ -9,7 +9,7 @@ const PageBlog = () => {
     return (
         <div className="flex justify-start h-screen bg-gray-100">
           <div className="w-full max-w-3xl mx-auto  px-4 pt-20">
-            <h1 className="text-4xl font-bold text-black-600">Blogs</h1>
+            <h1 className="text-4xl font-bold text-black-600 text-gray-700 dark:text-gray-300">Blogs</h1>
             {pathname == '/' ? 
             ( <>
                 {blogs?.map((blog, index) => 
