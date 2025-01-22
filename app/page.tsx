@@ -9,10 +9,10 @@ export default function Home() {
               Software Engineer | Fullstack Developer | Python Developer
             </p>
             <p className="text-base mt-4 text-gray-700 text-left text-justify">
-            Hi There, Welcome and thank you for visiting this page!
-            I’m a passionate software engineer dedicated to building innovative and efficient solutions. 
-            With experience in full-stack development, I enjoy sharing ideas, collaborating, and creating applications that make a real impact.
-            Feel free to explore and reach out if you have any questions or would like to connect!😊 
+              Hi There, Welcome and thank you for visiting this page!
+              I&apos;m a passionate software engineer dedicated to building innovative and efficient solutions.
+              With experience in full-stack development, I enjoy sharing ideas, collaborating, and creating applications that make a real impact.
+              Feel free to explore and reach out if you have any questions or would like to connect!&nbsp;&mdash;&nbsp;😊
             </p>
           <PageBlog />
           </div>

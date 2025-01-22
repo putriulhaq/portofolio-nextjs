@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export const Footer: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ export const Footer: React.FC = () => {
         rel="noopener noreferrer"
         className="mx-2"
       >
-        <img
+        <Image
           src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
           alt="LinkedIn"
           className="h-6 w-6"
@@ -21,7 +22,7 @@ export const Footer: React.FC = () => {
         rel="noopener noreferrer"
         className="mx-2"
       >
-        <img
+        <Image
           src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
           alt="GitHub"
           className="h-6 w-6"
@@ -31,7 +32,7 @@ export const Footer: React.FC = () => {
         href="mailto:putriulhaq0609@gmail.com"
         className="mx-2"
     >
-        <img
+        <Image
         src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
         alt="Email"
         className="h-6 w-6"

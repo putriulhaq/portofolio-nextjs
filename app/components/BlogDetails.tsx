@@ -2,8 +2,8 @@
 'use client'
 
 type BlogDetailsProps = {
-  title: string,
-  description:string
+  title: string | undefined,
+  description: string | undefined
 }
 
 const BlogDetails: React.FC<BlogDetailsProps> = ({title, description}) => {
