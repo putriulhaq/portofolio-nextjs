@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "punyaulhaq",
   description: "ulhaq's Portofolio",
+  icons: {
+    icon: "../u.png", // Untuk favicon standar
+  },
 };
 
 export default function RootLayout({
