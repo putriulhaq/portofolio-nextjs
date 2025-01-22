@@ -27,6 +27,16 @@ export const Footer: React.FC = () => {
           className="h-6 w-6"
         />
       </a>
+      <a
+        href="mailto:putriulhaq0609@gmail.com"
+        className="mx-2"
+    >
+        <img
+        src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+        alt="Email"
+        className="h-6 w-6"
+        />
+    </a>
     </footer>
   );
 };

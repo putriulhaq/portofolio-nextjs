@@ -15,7 +15,7 @@ const BlogItem:React.FC<BlogItemProps> = ({title, date, link}) => {
             <p className="text-sm text-gray-500">{date}</p>
         </div>
         <div className="text-end">
-            <Link href={link} legacyBehavior><a className="text-blue-500 hover:underline text-end" target="_blank">Read More</a></Link>
+            <Link className="text-blue-500 hover:underline text-end" href={link}>Read More</Link>
         </div>
     </div>
     )

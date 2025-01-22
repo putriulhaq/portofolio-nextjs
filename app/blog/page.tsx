@@ -16,7 +16,9 @@ const PageBlog = () => {
                 index < 3 && (
                     <BlogItem key={index} title={blog.title} date={blog.date} link={blog.link} />
                 ))}
-                <div className="mt-4">
+
+                {blogs.length > 3 && (
+                    <div className="mt-4">
                     <a
                         href="/blog"
                         className="text-blue-500 hover:underline text-lg font-medium"
@@ -24,6 +26,8 @@ const PageBlog = () => {
                         Go to more blogs
                     </a>
                 </div>
+                )} 
+                
             </>
             ) 
             : 
