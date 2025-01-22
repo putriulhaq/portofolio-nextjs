@@ -2,6 +2,7 @@
 import BlogItem from "../components/BlogItem";
 import {blogs}  from "../api/blogs";
 import { usePathname } from 'next/navigation'
+import Link from "next/link";
  
 const PageBlog = () => { 
     const pathname = usePathname()
@@ -18,12 +19,7 @@ const PageBlog = () => {
 
                 {blogs.length > 3 && (
                     <div className="mt-4">
-                    <a
-                        href="/blog"
-                        className="text-blue-500 hover:underline text-lg font-medium"
-                    >
-                        Go to more blogs
-                    </a>
+                        <Link className="text-blue-500 hover:underline text-lg font-medium" href="/blog">Go to more blogs</Link>
                 </div>
                 )} 
                 
