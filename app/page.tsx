@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <div className="flex justify-start h-screen bg-gray-100">
           <div className="w-full max-w-3xl mx-auto  px-4 pt-20">
-            <h1 className="text-4xl font-bold text-black-600">Dhiya'Ulhaq Putri Kinanty</h1>
+            <h1 className="text-4xl font-bold text-black-600">Dhiya&apos;Ulhaq Putri Kinanty</h1>
             <p className="text-lg mt-4 text-gray-700"> 
               Software Engineer | Fullstack Developer | Python Developer
             </p>
