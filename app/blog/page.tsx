@@ -1,5 +1,4 @@
 'use client'
-import Image from "next/image";
 import BlogItem from "../components/BlogItem";
 import {blogs}  from "../api/blogs";
 import { usePathname } from 'next/navigation'

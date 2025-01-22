@@ -1,4 +1,3 @@
-import Image from "next/image";
 import PageBlog from "./blog/page";
 
 export default function Home() {

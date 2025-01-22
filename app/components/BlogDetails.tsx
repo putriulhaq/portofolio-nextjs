@@ -1,6 +1,5 @@
 // components/BlogDetails.tsx
 'use client'
-import { useRouter, usePathname } from 'next/navigation'
 
 type BlogDetailsProps = {
   title: string,
