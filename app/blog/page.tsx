@@ -1,0 +1,41 @@
+'use client'
+import Image from "next/image";
+import BlogItem from "../components/BlogItem";
+import {blogs}  from "../api/blogs";
+import { usePathname } from 'next/navigation'
+ 
+const PageBlog = () => { 
+    const pathname = usePathname()
+    return (
+        <div className="flex justify-start h-screen bg-gray-100">
+          <div className="w-full max-w-3xl mx-auto  px-4 pt-20">
+            <h1 className="text-4xl font-bold text-black-600">Blogs</h1>
+            {pathname == '/' ? 
+            ( <>
+                {blogs?.map((blog, index) => 
+                index < 3 && (
+                    <BlogItem key={index} title={blog.title} date={blog.date} link={blog.link} />
+                ))}
+                <div className="mt-4">
+                    <a
+                        href="/blog"
+                        className="text-blue-500 hover:underline text-lg font-medium"
+                    >
+                        Go to more blogs
+                    </a>
+                </div>
+            </>
+            ) 
+            : 
+            (
+                blogs?.map((blog, index) => (
+                    <BlogItem key={index} title={blog.title} date={blog.date} link={blog.link} />
+                ))
+            )   
+            }
+          </div>
+        </div>
+      );
+}
+
+export default PageBlog
