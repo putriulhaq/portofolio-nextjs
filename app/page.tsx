@@ -6,7 +6,7 @@ export default function Home() {
           <div className="w-full max-w-3xl mx-auto  px-4 pt-20">
             <h1 className="text-4xl font-bold text-black-600">Dhiya&apos;Ulhaq Putri Kinanty</h1>
             <p className="text-lg mt-4 text-gray-700"> 
-              Software Engineer | Fullstack Developer | Python Developer
+              Software Engineer
             </p>
             <p className="text-base mt-4 text-gray-700 text-left text-justify">
               Hi There, Welcome and thank you for visiting this page!
