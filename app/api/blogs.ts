@@ -15,11 +15,11 @@ export const blogs = [
     date: "June 18, 2024",
     link: "https://ulhaq.notion.site/Elasticsearch-and-Kibana-with-Docker-c74cd6aaf8584472afcb722c5b0fe95b?pvs=4",
   },
-  {
-    slug: "",
-    title: "Elasticsearch and Kibana with Docker",
-    description: "",
-    date: "June 18, 2024",
-    link: "https://ulhaq.notion.site/Elasticsearch-and-Kibana-with-Docker-c74cd6aaf8584472afcb722c5b0fe95b?pvs=4",
-  },
+  // {
+  //   slug: "",
+  //   title: "Elasticsearch and Kibana with Docker",
+  //   description: "",
+  //   date: "June 18, 2024",
+  //   link: "https://ulhaq.notion.site/Elasticsearch-and-Kibana-with-Docker-c74cd6aaf8584472afcb722c5b0fe95b?pvs=4",
+  // },
 ];
