@@ -1,40 +1,31 @@
 'use client'
 import BlogItem from "../components/BlogItem";
-import {blogs}  from "../api/blogs";
-import { usePathname } from 'next/navigation'
+import { blogs } from "../api/blogs";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
- 
-const PageBlog = () => { 
-    const pathname = usePathname()
-    return (
-        <div className="flex justify-start h-screen bg-gray-100">
-          <div className="w-full max-w-3xl mx-auto  px-4 pt-20">
-            <h1 className="text-4xl font-bold text-black-600 text-gray-700 dark:text-gray-300">Blogs</h1>
-            {pathname == '/' ? 
-            ( <>
-                {blogs?.map((blog, index) => 
-                index < 3 && (
-                    <BlogItem key={index} title={blog.title} date={blog.date} link={blog.link} />
-                ))}
 
-                {blogs.length > 3 && (
-                    <div className="mt-4">
-                        <Link className="text-blue-500 hover:underline text-lg font-medium" href="/blog">Go to more blogs</Link>
-                </div>
-                )} 
-                
-            </>
-            ) 
-            : 
-            (
-                blogs?.map((blog, index) => (
-                    <BlogItem key={index} title={blog.title} date={blog.date} link={blog.link} />
-                ))
-            )   
-            }
-          </div>
-        </div>
-      );
-}
+const PageBlog = () => {
+  const pathname = usePathname();
+  const isHome = pathname == "/";
+  const list = isHome ? blogs.slice(0, 3) : blogs;
 
-export default PageBlog
+  return (
+    <section>
+      <h2 className="text-sm text-muted">
+        <span className="text-accent">$</span> ls blog/
+      </h2>
+      <ul className="mt-3">
+        {list.map((blog, index) => (
+          <BlogItem key={index} title={blog.title} date={blog.date} link={blog.link} />
+        ))}
+      </ul>
+      {isHome && blogs.length > 3 && (
+        <Link href="/blog" className="mt-4 inline-block text-sm text-accent hover:underline">
+          more blogs →
+        </Link>
+      )}
+    </section>
+  );
+};
+
+export default PageBlog;
