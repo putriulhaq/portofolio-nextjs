@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {Footer} from "./components/footer" 
+import { Footer } from "./components/footer";
 import { Header } from "./components/header";
+import { site } from "./site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,10 +16,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "punyaulhaq",
-  description: "ulhaq's Portofolio",
+  metadataBase: new URL(site.url),
+  title: {
+    default: `${site.name} · ${site.handle}`,
+    template: `%s · ${site.handle}`,
+  },
+  description: site.description,
   icons: {
-    icon: "../u.png", // Untuk favicon standar
+    icon: "/u.png",
+  },
+  openGraph: {
+    title: site.name,
+    description: site.description,
+    url: "/",
+    siteName: site.handle,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
@@ -29,12 +44,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100`}
-      >
-        <Header></Header>
-        {children}
-        <Footer></Footer>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className="mx-auto flex min-h-screen max-w-2xl flex-col px-4 sm:px-6">
+          <Header />
+          <main className="flex-1 py-10">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

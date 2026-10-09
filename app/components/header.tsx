@@ -1,17 +1,30 @@
-'use client'
-import { useRouter } from 'next/navigation';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
+import fs from "node:fs";
+import path from "node:path";
+import { site } from "../site";
+
+const hasResume = fs.existsSync(path.join(process.cwd(), "public", site.resume));
 
 export const Header: React.FC = () => {
-    const router = useRouter();
-
-    const handleClick = () => {
-    // Navigasi ke homepage menggunakan router.push() di client-side
-    router.push('/');
-  };
   return (
-    <header className="bg-gray-100 p-4 flex justify-center font-bold items-center fixed top-0 left-0 w-full">
-        <h1 onClick={handleClick} className='cursor-pointer text-gray-700 dark:text-gray-300'>punyaulhaq</h1>
+    <header className="flex items-center justify-between border-b border-line py-5 text-sm">
+      <Link href="/" className="font-bold">
+        <span className="text-accent">~/</span>{site.handle}
+      </Link>
+      <nav className="flex gap-5 text-muted">
+        <Link href="/" className="hover:text-foreground">
+          about
+        </Link>
+        <Link href="/blog" className="hover:text-foreground">
+          blog
+        </Link>
+        {hasResume && (
+          <a href={site.resume} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+            cv
+          </a>
+        )}
+      </nav>
     </header>
   );
 };
